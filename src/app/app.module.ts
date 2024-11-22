@@ -10,6 +10,10 @@ import { NavbarComponent } from './components/utilities/navbar/navbar.component'
 import { NewsComponent } from './components/news/news.component';
 import { NgModule } from '@angular/core';
 import { TeamComponent } from './components/team/team.component';
+import { AboutComponent } from './components/about/about.component';
+import { BlogsComponent } from './components/blogs/blogs.component';
+import { FaqsComponent } from './components/faqs/faqs.component';
+import { PricingComponent } from './components/pricing/pricing.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { TeamComponent } from './components/team/team.component';
     NavbarComponent,
     FooterComponent,
     NewsComponent,
-    TeamComponent
+    TeamComponent,
+    AboutComponent,
+    BlogsComponent,
+    FaqsComponent,
+    PricingComponent
   ],
   imports: [
     BrowserModule,
