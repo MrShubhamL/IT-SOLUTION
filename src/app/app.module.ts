@@ -9,6 +9,7 @@ import { MainComponent } from './components/main/main.component';
 import { NavbarComponent } from './components/utilities/navbar/navbar.component';
 import { NgModule } from '@angular/core';
 import { NewsComponent } from './components/news/news.component';
+import { TeamComponent } from './components/team/team.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NewsComponent } from './components/news/news.component';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    NewsComponent
+    NewsComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
