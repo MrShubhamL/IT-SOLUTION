@@ -1,12 +1,15 @@
-import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './components/main/main.component';
+
 import { HomeComponent } from './components/home/home.component';
+import { MainComponent } from './components/main/main.component';
+import { NewsComponent } from './components/news/news.component';
+import { NgModule } from '@angular/core';
+import { TeamComponent } from './components/team/team.component';
 import { AboutComponent } from './components/about/about.component';
-import { PricingComponent } from './components/pricing/pricing.component';
 import { FaqsComponent } from './components/faqs/faqs.component';
-import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { PricingComponent } from './components/pricing/pricing.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 
 const routes: Routes = [
   {
@@ -18,12 +21,24 @@ const routes: Routes = [
     path: '',
     component: MainComponent,
     children:[
-      {path:'home',component:HomeComponent,},
-      { path:'about', component:AboutComponent},
-      { path:'pricing',component:PricingComponent},
-      { path:'faqs',component:FaqsComponent},
-      {path:'privacy-policy',component:PrivacyPolicyComponent},
-      {path:'blogs', component:BlogsComponent}
+      {
+        path:'home',
+        component:HomeComponent
+      },
+      {
+        path:'news',
+        component: NewsComponent
+      },
+      {
+        path:'team',
+        component:TeamComponent
+      }
+    ,
+    { path:'about',component:AboutComponent},
+    {path:'faqs',component:FaqsComponent},
+    {path:'pricing',component:PricingComponent},
+    {path:'privacy-policy',component:PrivacyPolicyComponent},
+    {path:'blogs',component:BlogsComponent}
 
     ]
   },
