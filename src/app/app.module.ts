@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './components/main/main.component';
 import { NavbarComponent } from './components/utilities/navbar/navbar.component';
 import { NgModule } from '@angular/core';
+import { NewsComponent } from './components/news/news.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NgModule } from '@angular/core';
     MainComponent,
     HomeComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
