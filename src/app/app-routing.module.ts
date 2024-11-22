@@ -16,18 +16,11 @@ const routes: Routes = [
     path: '',
     component: MainComponent,
     children:[
-      {
-        path:'home',
-        component:HomeComponent
-      },
-      {
-        path:'news',
-        component: NewsComponent
-      },
-      {
-        path:'team',
-        component:TeamComponent
-      }
+      {path:'home',component:HomeComponent},
+
+      {path:'news',component: NewsComponent},
+
+      {path:'team',component:TeamComponent}
 
     ]
   },
