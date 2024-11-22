@@ -12,12 +12,12 @@
         <li><a href="team.html" class="">Team</a></li>
         <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
           <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="packages.html">Pricing</a></li>
-            <li><a href="faqs.html">FAQs</a></li>
-            <li><a href="privacy-policy.html">Terms &amp; Conditions</a></li>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
+            <li><a [routerLink]="['/about']" routerLinkActive="router-link-active" >About</a></li>
+            <li><a [routerLink]="['/pricing']" routerLinkActive="router-link-active" >Pricing</a></li>
+            <li><a [routerLink]="['/faqs']" routerLinkActive="router-link-active">FAQs</a></li>
+            <li><a [routerLink]="['/privacy-policy']"routerLinkActive="router-link-active">Terms &amp; Conditions</a></li>
+            <li><a [routerLink]="['/privacy-policy']"routerLinkActive="router-link-active">Privacy Policy</a></li>
+            <li><a [routerLink]="['/blogs']"routerLinkActive="router-link-active">Blogs</a></li>
             <li><a href="blog-details.html">Blog Detail Page</a></li>
           </ul>
         </li>
