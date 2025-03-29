@@ -1,0 +1,22 @@
+.desc{
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  text-align: center;
+  color: white;
+  opacity: 0;
+}
+
+.hover-1:hover .desc{
+  opacity: 1;
+}
+
+.hover-1:hover img{
+  opacity: 25%;
+  filter: brightness(25%);
+  left: 0;
+}
+
+.hover-1:hover .hover-overlay{
+  opacity: 0;
+}

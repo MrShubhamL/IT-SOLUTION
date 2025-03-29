@@ -4,32 +4,30 @@ import { BlogService } from '../../services/blog.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-blogs',
-  templateUrl: './blogs.component.html',
-  styleUrl: './blogs.component.css'
+  selector: 'app-blogs-details',
+  templateUrl: './blogs-details.component.html',
+  styleUrl: './blogs-details.component.css'
 })
-export class BlogsComponent implements OnInit{
+export class BlogsDetailsComponent implements OnInit{
 
   constructor(private readonly service:BlogService, private readonly router:Router){}
 
-  blogs = [
+  news = [
     {
-      id : "",
-      name : "",
-      sentence : "",
-      authorname : "",
-      date : "",
-      image3 : "",
+      id:"",
+      name:"",
+      sentence:"",
+      authorname:"",
+      date:"",
+      image3:"",
+      description:""
     }
   ]
 
   ngOnInit(): void {
     this.service.getBlog().subscribe(res=>{
-        this.blogs = res;
-      // console.log(res);
+      this.news = res;
     })
   }
-
-
 
 }

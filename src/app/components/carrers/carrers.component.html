@@ -1,0 +1,156 @@
+<!--  Breadcrumbs  -->
+<div class="breadcrumbs">
+  <div class="page-header d-flex align-items-center">
+    <div class="container position-relative">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-6 text-center">
+          <h2>Carrer</h2>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav>
+    <div class="container">
+      <ol>
+        <li><a routerLink="/home">Home</a></li>
+        <li>Carrer</li>
+      </ol>
+    </div>
+  </nav>
+</div><!-- End Breadcrumbs -->
+
+<main id="main">
+
+  <div class="single-page">
+  <!-- Start Service Section -->
+      <section>
+              <div class="container py-5">
+                    <h4 class="text-center mb-4" style="color: rgb(30, 210, 189);">Career Page</h4>
+                    <div class="row">
+                      <!-- Job Card 1 -->
+                      <div class="col-md-4 mb-4" *ngFor="let j of carrer">
+                        <div class="card">
+                          <div class="card-body" >
+                            <!-- Job Role -->
+                            <h4 class="card-title text-dark" align="center"><i class="fas fa-laptop-code"></i>{{j.role}}</h4>
+                            <!-- Vacancy -->
+                            <p class="card-text"><i class="bi bi-person"></i> Vacancy: {{j.vacancy}}</p>
+                            <!-- Experience -->
+                            <p class="card-text"><i class="bi bi-briefcase"></i>Experience: {{j.experience}}</p>
+                            <!-- Description -->
+                            <p class="card-text"><i class="bi bi-gear"></i> Skill: {{j.skill}}</p>
+                            <p class="card-text"><i class="bi bi-file-earmark-fill"></i>{{j.description}}</p>
+                            <!-- Location -->
+                            <p class="card-text"><i class="bi bi-geo-alt"></i> Location: {{j.joblocation}}</p>
+                            <!-- Apply Button -->
+                            <button type="button" class="icon-box btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="width: 50%; height: 50px; padding: 10px;">
+                              Apply Now
+                            </button>
+                      </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <!--End Icon Box -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <form [formGroup]="form" (ngSubmit)="formSubmit()">
+            <div>
+              <h4 style="color: lightskyblue; text-align: center;">Application Form</h4>
+            </div>
+            <div class="row mb-3">
+              <label for="fullName" class="col-sm-2 col-form-label">Full Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="fullName" formControlName="name" placeholder="Enter your full name" required >
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <label for="email" class="col-sm-2 col-form-label">Email Address</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter your email" required>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <label for="phone" class="col-sm-2 col-form-label">Phone Number</label>
+              <div class="col-sm-10">
+                <input type="tel" class="form-control" id="phone" formControlName="contact" placeholder="Enter your phone number" required>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <label for="address" class="col-sm-2 col-form-label">Address</label>
+              <div class="col-sm-10">
+                <textarea class="form-control" id="address" rows="3" placeholder="Enter your address" formControlName="address" required></textarea>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <label for="position" class="col-sm-2 col-form-label">Position Applied For</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="position" formControlName="position" placeholder="Enter the position you are applying for" required>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <label for="resume" class="col-sm-2 col-form-label">Resume</label>
+              <div class="col-sm-10">
+                <input type="file" class="form-control" id="resume" formControlName="resume" accept=".pdf" (change)="onFileSelect($event)" required>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <label for="skills" class="col-sm-2 col-form-label">Skills</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="skills" formControlName="skl" placeholder="Enter your skill" required>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-sm-10 offset-sm-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="terms" required>
+                  <label class="form-check-label" for="terms">
+                    I agree to the <a href="#">terms and conditions</a>.
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-primary">Submit Application</button>
+                <button type="reset" class="btn btn-danger">Cancel</button>
+              </div>
+            </div>
+          </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="row">
+          <div class="col-lg-6 offset-lg-6">
+            <div class="card-header">
+              <h4 class="text-center bg text-primary">your response has been recorded</h4>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+</div>
+
+</main>

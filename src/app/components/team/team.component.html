@@ -5,7 +5,7 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-6 text-center">
           <h2>Our Team</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+          <p>Meet the people who make everything possible</p>
         </div>
       </div>
     </div>
@@ -13,7 +13,7 @@
   <nav>
     <div class="container">
       <ol>
-        <li><a href="index-2.html">Home</a></li>
+        <li><a routerLink="/home">Home</a></li>
         <li>Our Team</li>
       </ol>
     </div>
@@ -27,61 +27,62 @@
   <section id="team" class="team sections-bg">
     <div class="container aos-init aos-animate" data-aos="fade-up">
       <div class="row gy-4">
-        <div class="col-xl-3 col-md-6 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-          <div class="member">
-            <img src="assets/images/team/team-1.jpg" class="img-fluid" alt="">
-            <h4>Jhone Bi</h4>
-            <span>Application Manager</span>
+        <div class="col-xl-3 col-md-6 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" *ngFor="let t of team">
+          <div class="hover-1 member">
+            <img class="img-fliud" [src]="'data:image/jpeg;base64,' + t.image4" alt="loading.." class="img-fluid">
+            <div class="desc">
+              <h4>{{t.name}}</h4>
+              <span>{{t.designation}}</span>
+              <span>{{t.email}}</span>
             <div class="social">
-              <a href="#"><i class="bi bi-twitter"></i></a>
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-linkedin"></i></a>
-              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.google.com"><i class="bi bi-google"></i></a>
+              <a href="https://www.linkedin.com"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
-        </div><!-- End Team Member -->
+        </div>
+      </div>
 
-        <div class="col-xl-3 col-md-6 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
-          <div class="member">
+        <!-- <div class="col-xl-3 col-md-6 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+          <div class="hover-1 member">
             <img src="assets/images/team/team-2.jpg" class="img-fluid" alt="">
-            <h4>Sani Awesome</h4>
+            <div class="desc">
+              <h4>Sani Awesome</h4>
             <span>Social Media</span>
             <div class="social">
-              <a href="#"><i class="bi bi-twitter"></i></a>
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-linkedin"></i></a>
-              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.google.com"><i class="bi bi-google"></i></a>
+              <a href="https://www.linkedin.com"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
-        </div><!-- End Team Member -->
+        </div>
+      </div>
 
         <div class="col-xl-3 col-md-6 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
-          <div class="member">
+          <div class="hover-1 member">
             <img src="assets/images/team/team-3.jpg" class="img-fluid" alt="">
-            <h4>Andrio Willi</h4>
+            <div class="desc">
+              <h4>Andrio Willi</h4>
             <span>Content Writer</span>
             <div class="social">
-              <a href="#"><i class="bi bi-twitter"></i></a>
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-linkedin"></i></a>
-              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.google.com"><i class="bi bi-google"></i></a>
+              <a href="https://www.linkedin.com"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
-        </div><!-- End Team Member -->
+        </div>
+      </div>
 
         <div class="col-xl-3 col-md-6 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
-          <div class="member">
+          <div class="hover-1 member">
             <img src="assets/images/team/team-4.jpg" class="img-fluid" alt="">
-            <h4>Afa Jonson</h4>
+            <div class="desc">
+              <h4>Afa Jonson</h4>
             <span>Business Manager</span>
             <div class="social">
-              <a href="#"><i class="bi bi-twitter"></i></a>
-              <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-linkedin"></i></a>
-              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.google.com"><i class="bi bi-google"></i></a>
+              <a href="https://www.linkedin.com"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
-        </div><!-- End Team Member -->
+        </div>
+      </div> -->
 
       </div>
 
